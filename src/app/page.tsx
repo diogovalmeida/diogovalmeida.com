@@ -90,7 +90,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <p className="text-xs font-medium uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
           Stack
@@ -103,7 +103,7 @@ export default function Home() {
               style={{ background: 'var(--surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.25, delay: 0.9 + i * 0.04 }}
+              transition={{ duration: 0.25, delay: 0.6 + i * 0.04 }}
               whileHover={{ color: 'var(--text)', borderColor: 'var(--accent)', scale: 1.08, transition: snap }}
               whileTap={{ scale: 0.95, transition: snap }}
             >
@@ -117,7 +117,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         <p className="text-xs font-medium uppercase tracking-widest mb-5" style={{ color: 'var(--muted)' }}>
           Certifications
@@ -130,7 +130,7 @@ export default function Home() {
               style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.35, delay: 0.6 + i * 0.06 }}
+              transition={{ duration: 0.35, delay: 0.9 + i * 0.06 }}
               whileHover={{ borderColor: cert.color + '66', x: 4, transition: snap }}
             >
               <div className="w-1 h-7 rounded-full shrink-0" style={{ background: cert.color }} />
