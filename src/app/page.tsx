@@ -86,6 +86,33 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
+      {/* Stack */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+      >
+        <p className="text-xs font-medium uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
+          Stack
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, i) => (
+            <motion.span
+              key={skill}
+              className="px-3 py-1.5 rounded-md text-xs font-medium cursor-default"
+              style={{ background: 'var(--surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.25, delay: 0.9 + i * 0.04 }}
+              whileHover={{ color: 'var(--text)', borderColor: 'var(--accent)', scale: 1.08, transition: snap }}
+              whileTap={{ scale: 0.95, transition: snap }}
+            >
+              {skill}
+            </motion.span>
+          ))}
+        </div>
+      </motion.div>
+
       {/* Certifications */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -120,33 +147,6 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Stack */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <p className="text-xs font-medium uppercase tracking-widest mb-4" style={{ color: 'var(--muted)' }}>
-          Stack
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill, i) => (
-            <motion.span
-              key={skill}
-              className="px-3 py-1.5 rounded-md text-xs font-medium cursor-default"
-              style={{ background: 'var(--surface)', color: 'var(--muted)', border: '1px solid var(--border)' }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.25, delay: 0.9 + i * 0.04 }}
-              whileHover={{ color: 'var(--text)', borderColor: 'var(--accent)', scale: 1.08, transition: snap }}
-              whileTap={{ scale: 0.95, transition: snap }}
-            >
-              {skill}
-            </motion.span>
           ))}
         </div>
       </motion.div>
