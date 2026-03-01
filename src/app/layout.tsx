@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
   icons: {
     apple: '/apple-touch-icon.png',
-    icon: '/favicon.svg',
+    icon: './icon.png',
   },
   openGraph: {
     title: 'Diogo Almeida',
