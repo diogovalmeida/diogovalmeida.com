@@ -1,17 +1,17 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 16 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.5, delay: i * 0.12, ease: 'easeOut' },
   }),
 }
 
-const snap = { duration: 0.1, ease: 'easeOut' }
+const snap = { duration: 0.1, ease: 'easeOut' as const }
 
 const certifications = [
   { name: 'AZ-900', full: 'Microsoft Azure Fundamentals', issuer: 'Microsoft', color: '#0078d4' },
@@ -24,7 +24,7 @@ const certifications = [
 
 const skills = [
   'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions',
-  'Azure', 'AWS', 'Linux', 'Jenkins', 'Ansible',
+  'Azure', 'AWS', 'Linux', 'CI/CD', 'Nginx', 'Ansible',
 ]
 
 export default function Home() {
