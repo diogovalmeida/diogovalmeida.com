@@ -6,14 +6,14 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Diogo Almeida · DevOps',
+  title: 'Diogo Almeida',
   description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
   icons: {
     apple: '/apple-touch-icon.png',
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: 'Diogo Almeida · DevOps',
+    title: 'Diogo Almeida',
     description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
     url: 'https://www.diogovalmeida.com',
     siteName: 'Diogo Almeida',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diogo Almeida · DevOps',
+    title: 'Diogo Almeida',
     description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
     images: ['https://www.diogovalmeida.com/og.png'],
   },
