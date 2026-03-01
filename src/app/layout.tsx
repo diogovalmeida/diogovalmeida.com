@@ -6,7 +6,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Diogo Almeida · DevOps',
+  title: 'Diogo Almeida',
   description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
   icons: {
     icon: '/icon.png',
