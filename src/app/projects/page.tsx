@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
-const snap = { duration: 0.1, ease: 'easeOut' }
+const snap = { duration: 0.1, ease: 'easeOut' as const }
 
 const active = [
   {
