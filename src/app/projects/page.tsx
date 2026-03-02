@@ -7,14 +7,14 @@ const snap = { duration: 0.1, ease: 'easeOut' as const }
 
 const active = [
   {
-    title: 'Project Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
-    stack: ['Stack', 'Stack', 'Stack'],
-    github: 'https://github.com/diogovalmeida',
+    title: 'Local Kubernetes Platform',
+    description: 'A simple containerized FastAPI application with PostgreSQL deployed on a local Kubernetes cluster (Kind), featuring dev and prod namespaces and basic monitoring with Prometheus and Grafana.',
+    stack: ['Kubernetes', 'Docker', 'FastAPI', 'PostgreSQL', 'Prometheus', 'Grafana', 'NGINX'],
+    github: 'https://github.com/diogovalmeida/local-k8s-monitoring',
     details: [
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit',
-      'Sed do eiusmod tempor incididunt ut labore',
-      'Ut enim ad minim veniam quis nostrud',
+      'Multi-stage Docker builds with non-root user, healthchecks and proper .dockerignore',
+      'Kubernetes setup with namespaces (dev/prod), resource limits, ConfigMaps, Secrets and Ingress',
+      'Observability stack with Prometheus and Grafana — custom app dashboard and failure simulations',
     ],
   },
   {
@@ -112,7 +112,7 @@ function ProjectCard({ project, index, dotColor }: {
           {project.description}
         </p>
 
-        <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="flex items-center justify-between gap-2">
           <div className="flex gap-2 flex-wrap">
             {project.stack.map((tech, i) => (
               <span
@@ -126,7 +126,7 @@ function ProjectCard({ project, index, dotColor }: {
           </div>
           <motion.button
             onClick={() => setOpen(!open)}
-            className="text-xs shrink-0"
+            className="text-xs shrink-0 ml-auto"
             style={{ color: 'var(--muted)' }}
             whileHover={{ color: 'var(--text)', transition: snap }}
           >
