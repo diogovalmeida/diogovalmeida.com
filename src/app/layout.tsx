@@ -4,13 +4,14 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Diogo Almeida',
   description: 'Portfolio of Diogo Almeida, focused on Cloud & DevOps.',
   icons: {
-    apple: '/apple-touch-icon.png',
     icon: './icon.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: 'Diogo Almeida',
@@ -37,13 +38,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
-        <div className="max-w-2xl mx-auto px-6 py-16 w-full flex flex-col min-h-screen">
-          <Nav />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <div className="max-w-2xl mx-auto px-6 py-16 w-full flex flex-col min-h-screen">
+            <Nav />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

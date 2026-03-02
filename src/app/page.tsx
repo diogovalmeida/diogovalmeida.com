@@ -24,7 +24,7 @@ const certifications = [
 
 const skills = [
   'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions',
-  'Azure', 'AWS', 'Linux', 'CI/CD', 'Nginx', 'Ansible',
+  'Azure', 'AWS', 'Linux', 'Jenkins', 'Python', 'Ansible',
 ]
 
 export default function Home() {
