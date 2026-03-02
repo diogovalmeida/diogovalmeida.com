@@ -50,3 +50,16 @@ body {
   background: var(--border);
   border-radius: 3px;
 }
+
+/* Smooth Light/Dark Mode */
+html,
+body,
+main,
+header,
+footer,
+nav,
+div,
+section,
+article {
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
