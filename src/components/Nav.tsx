@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, type Variants } from 'framer-motion'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -38,47 +38,57 @@ function MoonIcon() {
   )
 }
 
-// Light → Dark: sol "mergulha" para baixo e gira enquanto desaparece
-const sunExitVariants = {
+const sunExitVariants: Variants = {
   exit: {
     y: 6,
     rotate: 90,
     scale: 0.4,
     opacity: 0,
-    transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+    },
   },
 }
 
-// Dark → Light: lua "sobe" e desliza para fora enquanto desaparece
-const moonExitVariants = {
+const moonExitVariants: Variants = {
   exit: {
     y: -6,
     rotate: -30,
     scale: 0.4,
     opacity: 0,
-    transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
+    transition: {
+      duration: 0.3,
+      ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+    },
   },
 }
 
-const sunEnterVariants = {
+const sunEnterVariants: Variants = {
   initial: { y: -8, rotate: -90, scale: 0.4, opacity: 0 },
   animate: {
     y: 0,
     rotate: 0,
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.35, ease: [0.0, 0.0, 0.2, 1.4] },
+    transition: {
+      duration: 0.35,
+      ease: [0.0, 0.0, 0.2, 1.4] as [number, number, number, number],
+    },
   },
 }
 
-const moonEnterVariants = {
+const moonEnterVariants: Variants = {
   initial: { y: 8, rotate: 30, scale: 0.4, opacity: 0 },
   animate: {
     y: 0,
     rotate: 0,
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.35, ease: [0.0, 0.0, 0.2, 1.4] },
+    transition: {
+      duration: 0.35,
+      ease: [0.0, 0.0, 0.2, 1.4] as [number, number, number, number],
+    },
   },
 }
 
@@ -97,7 +107,11 @@ export default function Nav() {
 
   return (
     <nav className="flex items-center justify-between mb-20">
-      <Link href="/" className="transition-opacity duration-200 hover:opacity-70" style={{ color: 'var(--text)' }}>
+      <Link
+        href="/"
+        className="transition-opacity duration-200 hover:opacity-70"
+        style={{ color: 'var(--text)' }}
+      >
         <DALogo />
       </Link>
 
@@ -105,8 +119,15 @@ export default function Nav() {
         {links.map(({ href, label }) => {
           const isActive = pathname === href
           return (
-            <Link key={href} href={href} className="px-3 py-1.5 rounded-md text-sm transition-all duration-200"
-              style={{ color: isActive ? 'var(--text)' : 'var(--muted)', background: isActive ? 'var(--surface)' : 'transparent' }}>
+            <Link
+              key={href}
+              href={href}
+              className="px-3 py-1.5 rounded-md text-sm transition-all duration-200"
+              style={{
+                color: isActive ? 'var(--text)' : 'var(--muted)',
+                background: isActive ? 'var(--surface)' : 'transparent',
+              }}
+            >
               {label}
             </Link>
           )
@@ -116,7 +137,11 @@ export default function Nav() {
           <motion.button
             onClick={handleToggle}
             className="ml-2 p-1.5 rounded-md overflow-hidden"
-            style={{ color: 'var(--muted)', background: 'transparent', border: '1px solid var(--border)' }}
+            style={{
+              color: 'var(--muted)',
+              background: 'transparent',
+              border: '1px solid var(--border)',
+            }}
             whileHover={{ borderColor: 'var(--accent)', color: 'var(--text)' }}
             transition={{ duration: 0.1 }}
             aria-label="Toggle theme"
