@@ -112,7 +112,7 @@ function ProjectCard({ project, index, dotColor }: {
           {project.description}
         </p>
 
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-end justify-between gap-2">
           <div className="flex gap-2 flex-wrap">
             {project.stack.map((tech, i) => (
               <span
@@ -126,7 +126,7 @@ function ProjectCard({ project, index, dotColor }: {
           </div>
           <motion.button
             onClick={() => setOpen(!open)}
-            className="text-xs shrink-0 ml-auto"
+            className="text-xs shrink-0"
             style={{ color: 'var(--muted)' }}
             whileHover={{ color: 'var(--text)', transition: snap }}
           >
