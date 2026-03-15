@@ -6,10 +6,24 @@ import { useState } from 'react'
 const snap = { duration: 0.1, ease: 'easeOut' as const }
 
 const active = [
+{
+  title: 'CI/CD Pipeline with GitHub Actions',
+  description: 'Complete CI/CD pipeline for a Kubernetes-based application using GitHub Actions with a self-hosted runner — automated testing, Docker image builds, push to Docker Hub and automatic deployment to local cluster.',
+  stack: ['GitHub Actions', 'Docker Hub', 'Kubernetes'],
+  github: 'https://github.com/diogovalmeida/',
+  details: [
+    'Self-hosted GitHub Actions runner on local machine — triggers on every push to main',
+    'Pipeline stages: lint, test, Docker build and push and deploy',
+    'Automated rollback on failed deployments using Kubernetes rollout undo',
+  ],
+},
+]
+
+const finished = [
   {
     title: 'Local Kubernetes Platform',
     description: 'A simple containerized FastAPI application with PostgreSQL deployed on a local Kubernetes cluster (Kind), featuring dev and prod namespaces and basic monitoring with Prometheus and Grafana.',
-    stack: ['Kubernetes', 'Docker', 'FastAPI', 'PostgreSQL', 'Prometheus', 'Grafana', 'NGINX'],
+    stack: ['Kubernetes', 'Docker', 'FastAPI', 'PostgreSQL', 'Prometheus', 'Grafana', 'NGINX', 'Helm'],
     github: 'https://github.com/diogovalmeida/local-k8s-monitoring',
     details: [
       'Multi-stage Docker builds with non-root user, healthchecks and proper .dockerignore',
@@ -17,54 +31,24 @@ const active = [
       'Observability stack with Prometheus and Grafana — custom app dashboard and failure simulations',
     ],
   },
-  {
-    title: 'Project Title',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa.',
-    stack: ['Stack', 'Stack', 'Stack', 'Stack'],
-    github: 'https://github.com/diogovalmeida',
-    details: [
-      'Excepteur sint occaecat cupidatat non proident',
-      'Sunt in culpa qui officia deserunt mollit anim',
-      'Lorem ipsum dolor sit amet consectetur',
-    ],
-  },
-]
-
-const finished = [
-  {
-    title: 'Project Title',
-    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam feugiat vitae ultricies eget.',
-    stack: ['Stack', 'Stack', 'Stack'],
-    github: 'https://github.com/diogovalmeida',
-    details: [
-      'Pellentesque habitant morbi tristique senectus',
-      'Vestibulum tortor quam feugiat vitae ultricies',
-      'Lorem ipsum dolor sit amet consectetur adipiscing',
-    ],
-  },
-  {
-    title: 'Project Title',
-    description: 'Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi condimentum sed.',
-    stack: ['Stack', 'Stack', 'Stack', 'Stack'],
-    github: 'https://github.com/diogovalmeida',
-    details: [
-      'Aenean ultricies mi vitae est mauris placerat',
-      'Quisque sit amet est et sapien ullamcorper',
-      'Vestibulum erat wisi condimentum sed commodo',
-    ],
-  },
 ]
 
 const comingSoon = [
   {
-    title: 'Project Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
-    stack: ['Stack', 'Stack', 'Stack'],
+    title: 'Infrastructure Provisioning with Terraform',
+    description: 'Infrastructure as Code project using Terraform to provision and manage a complete cloud-like environment.',
+    stack: ['Terraform', 'AWS'],
+    github: 'https://github.com/diogovalmeida/',
+    details: [
+    ],
   },
   {
-    title: 'Project Title',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.',
-    stack: ['Stack', 'Stack', 'Stack'],
+  title: 'Server Automation with Ansible',
+  description: 'Ansible playbooks to automate server provisioning, configuration management and application deployment across multiple environments — from a bare Linux machine to a fully configured production-ready server.',
+  stack: ['Ansible', 'Linux'],
+  github: 'https://github.com/diogovalmeida/',
+  details: [
+    ],
   },
 ]
 
