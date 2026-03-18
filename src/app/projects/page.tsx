@@ -6,17 +6,14 @@ import { useState } from 'react'
 const snap = { duration: 0.1, ease: 'easeOut' as const }
 
 const active = [
-{
-  title: 'CI/CD Pipeline with GitHub Actions',
-  description: 'Complete CI/CD pipeline for a Kubernetes-based application using GitHub Actions with a self-hosted runner — automated testing, Docker image builds, push to Docker Hub and automatic deployment to local cluster.',
-  stack: ['GitHub Actions', 'Docker Hub', 'Kubernetes'],
+  {
+  title: 'Server Automation with Ansible',
+  description: 'Ansible playbooks to automate server provisioning, configuration management and application deployment across multiple environments — from a bare Linux machine to a fully configured production-ready server.',
+  stack: ['Ansible', 'Linux'],
   github: 'https://github.com/diogovalmeida/',
   details: [
-    'Self-hosted GitHub Actions runner on local machine — triggers on every push to main',
-    'Pipeline stages: lint, test, Docker build and push and deploy',
-    'Automated rollback on failed deployments using Kubernetes rollout undo',
-  ],
-},
+    ],
+  },
 ]
 
 const finished = [
@@ -35,19 +32,22 @@ const finished = [
 
 const comingSoon = [
   {
+  title: 'CI/CD Pipeline with GitHub Actions',
+  description: 'Complete CI/CD pipeline for a Kubernetes-based application using GitHub Actions with a self-hosted runner — automated testing, Docker image builds, push to Docker Hub and automatic deployment to local cluster.',
+  stack: ['GitHub Actions', 'Docker Hub', 'Kubernetes'],
+  github: 'https://github.com/diogovalmeida/',
+  details: [
+    'Self-hosted GitHub Actions runner on local machine — triggers on every push to main',
+    'Pipeline stages: lint, test, Docker build and push and deploy',
+    'Automated rollback on failed deployments using Kubernetes rollout undo',
+    ],
+  },
+  {
     title: 'Infrastructure Provisioning with Terraform',
     description: 'Infrastructure as Code project using Terraform to provision and manage a complete cloud-like environment.',
     stack: ['Terraform', 'AWS'],
     github: 'https://github.com/diogovalmeida/',
     details: [
-    ],
-  },
-  {
-  title: 'Server Automation with Ansible',
-  description: 'Ansible playbooks to automate server provisioning, configuration management and application deployment across multiple environments — from a bare Linux machine to a fully configured production-ready server.',
-  stack: ['Ansible', 'Linux'],
-  github: 'https://github.com/diogovalmeida/',
-  details: [
     ],
   },
 ]
